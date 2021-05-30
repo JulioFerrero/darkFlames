@@ -11,7 +11,7 @@ using UnityEngine;
 
          void Start()
          {
-             targetPosition = target.TransformPoint(new Vector3(0.8f, 0.16f, -1));
+             targetPosition = target.TransformPoint(new Vector3(0.8f, 0.85f, -1));
          }
 
          void Update()
@@ -20,11 +20,11 @@ using UnityEngine;
              
              if (Input.GetKey("left"))
              {
-                 targetPosition = target.TransformPoint(new Vector3(-0.8f, 0.16f, -1));
+                 targetPosition = target.TransformPoint(new Vector3(-0.8f, 0.85f, -1));
              }
              else if (Input.GetKey("right"))
              {
-                 targetPosition = target.TransformPoint(new Vector3(0.8f, 0.16f, -1));
+                 targetPosition = target.TransformPoint(new Vector3(0.8f, 0.85f, -1));
              }
 
              // Smoothly move the camera towards that target position
