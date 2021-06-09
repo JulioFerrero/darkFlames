@@ -6,13 +6,18 @@ using UnityEngine.Tilemaps;
 public enum CharacterState
 {
     IDLE,
-    RUNNING,
-    DEAD
+    RUNNING
 }
 
 public class PlayerController : MonoBehaviour
 {
     public CharacterState mPlayerState = CharacterState.IDLE;
+    public float speed;
+    public float distance;
+    public LayerMask whatIsLadder;
+    private bool isClimbing;
+    private float inputVertical;
+    private Rigidbody2D rb;
 
     [Header("Movement Settings")]
     public float mSpeed = 1.75f;
@@ -33,15 +38,40 @@ public class PlayerController : MonoBehaviour
     {
         _mAnimatorComponent = gameObject.GetComponent<Animator>();
         _mAnimatorComponent.runtimeAnimatorController = mIdleController;
-
-
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        if (!_bInputsDisabled)
-        {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, whatIsLadder);
 
+        if (hitInfo.collider != null)
+        {
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                isClimbing = true;
+            }
+        }
+        else
+        {
+            isClimbing = false;
+        }
+
+        if (isClimbing == true)
+        {
+            inputVertical = Input.GetAxisRaw("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, inputVertical * speed);
+            rb.gravityScale = 0;
+        }
+        else
+        {
+            rb.gravityScale = 3;
+        }
+        
+         
+        
+        if (!PauseMenu.isPaused)
+        {
             _bPlayerStateChanged = false;
             if (mPlayerState == CharacterState.IDLE)
             {
@@ -87,6 +117,7 @@ public class PlayerController : MonoBehaviour
             {
                 ChangeAnimator();
             }
+
         }
     }
 
