@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: f39024397d56be2a39bb2d4b58d1866c
+guid: e2645e35273e97c1eaeb5792d5dd76a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 918941039524603661
-    second: antorcha_0
+      213: -4858518953905356877
+    second: rubyDown_5
   - first:
-      213: -7744687979944695821
-    second: antorcha_1
+      213: 631711587761798691
+    second: rubyDown_6
   - first:
-      213: 94296937796607459
-    second: antorcha_2
+      213: -6550931408235354281
+    second: rubyDown_7
   - first:
-      213: -7409794634972207052
-    second: antorcha_3
+      213: 1895026193420522411
+    second: rubyDown_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,85 +115,190 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: antorcha_0
+      name: rubyDown_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 47
-        width: 12
-        height: 53
+        x: 0
+        y: 37
+        width: 17
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d076466b10cb0cc00800000000000000
-      internalID: 918941039524603661
+      spriteID: 5745c9036c2138640800000000000000
+      internalID: 5080925447032427637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: antorcha_1
+      name: rubyDown_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 47
-        width: 12
-        height: 53
+        x: 17
+        y: 37
+        width: 18
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f7a82bb057558490800000000000000
-      internalID: -7744687979944695821
+      spriteID: 00eb145fe562ef6f0800000000000000
+      internalID: -649039107011265024
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: antorcha_2
+      name: rubyDown_2
       rect:
         serializedVersion: 2
-        x: 41
-        y: 47
-        width: 12
-        height: 53
+        x: 35
+        y: 37
+        width: 18
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ed16c8b0920f4100800000000000000
-      internalID: 94296937796607459
+      spriteID: e3e51ef88812118a0800000000000000
+      internalID: -6336246330320396738
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: antorcha_3
+      name: rubyDown_3
       rect:
         serializedVersion: 2
-        x: 56
-        y: 47
-        width: 12
-        height: 53
+        x: 0
+        y: 19
+        width: 17
+        height: 14
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 438e2ebc90f1b2990800000000000000
-      internalID: -7409794634972207052
+      spriteID: 5021eb7cbbff92710800000000000000
+      internalID: 1669146318892569093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubyDown_4
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 19
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ede1f5c4f1ec850800000000000000
+      internalID: 6399086533413887641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubyDown_5
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 19
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bff7f1c0c2139cb0800000000000000
+      internalID: -4858518953905356877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubyDown_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e3a05975a44c800800000000000000
+      internalID: 631711587761798691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubyDown_7
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ae20b79a6615a0800000000000000
+      internalID: -6550931408235354281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: rubyDown_8
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba314ea584c7c4a10800000000000000
+      internalID: 1895026193420522411
       vertices: []
       indices: 
       edges: []

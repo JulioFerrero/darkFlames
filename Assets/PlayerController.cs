@@ -65,7 +65,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            rb.gravityScale = 3;
+            rb.gravityScale = 2.2f;
         }
         
          
@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             _bPlayerStateChanged = false;
             if (mPlayerState == CharacterState.IDLE)
             {
-                if (Input.GetKey(KeyCode.RightArrow) || (Input.GetKey(KeyCode.LeftArrow)))
+                if (Input.GetKey(KeyCode.RightArrow) || (Input.GetKey(KeyCode.LeftArrow)) || (Input.GetKey(KeyCode.UpArrow)) || (Input.GetKey(KeyCode.DownArrow)))
                 {
                     _bPlayerStateChanged = true;
                     mPlayerState = CharacterState.RUNNING;
@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
             }
             else if (mPlayerState == CharacterState.RUNNING)
             {
-                if (!Input.GetKey(KeyCode.RightArrow) && (!Input.GetKey(KeyCode.LeftArrow)))
+                if (!Input.GetKey(KeyCode.RightArrow) && (!Input.GetKey(KeyCode.LeftArrow)) && (!Input.GetKey(KeyCode.UpArrow)) && (!Input.GetKey(KeyCode.DownArrow)))
                 {
                     _bPlayerStateChanged = true;
                     mPlayerState = CharacterState.IDLE;
@@ -139,35 +139,5 @@ public class PlayerController : MonoBehaviour
         }
 
         gameObject.GetComponent<Animator>().runtimeAnimatorController = newAnimator;
-    }
-
-    IEnumerator CheckGrounded()
-    {
-        yield return new WaitForSeconds(0.5f);
-
-        while (true)
-        {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position - Vector3.up * 1f, -Vector2.up, 0.05f);
-            if (hit.collider != null)
-            {
-                if (hit.transform.tag == "Terrain")
-                {
-                    if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
-                    {
-                        mPlayerState = CharacterState.RUNNING;
-                    }
-                    else
-                    {
-                        mPlayerState = CharacterState.IDLE;
-                    }
-                    break;
-                }
-            }
-
-            yield return new WaitForSeconds(0.05f);
-        }
-
-        ChangeAnimator();
-        yield return null;
     }
 }
